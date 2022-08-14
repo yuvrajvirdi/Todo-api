@@ -30,11 +30,11 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/posts", getTodos).Methods("GET")
-	router.HandleFunc("/posts", createTodo).Methods("POST")
-	router.HandleFunc("/posts/{id}", getTodo).Methods("GET")
-	router.HandleFunc("/posts/{id}", updateTodo).Methods("PUT")
-	router.HandleFunc("/posts/{id}", deleteTodo).Methods("DELETE")
+	router.HandleFunc("/todos", getTodos).Methods("GET")
+	router.HandleFunc("/todos", createTodo).Methods("POST")
+	router.HandleFunc("/todos/{id}", getTodo).Methods("GET")
+	router.HandleFunc("/todos/{id}", updateTodo).Methods("PUT")
+	router.HandleFunc("/todos/{id}", deleteTodo).Methods("DELETE")
 
 	http.ListenAndServe(":8000", router)
 }
